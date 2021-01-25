@@ -2,6 +2,6 @@
 
 # Usage: gauge-domino <value>
 
-GLYPH=$(echo "scale=0; 10+(${1}/10)" | bc -l)
+GLYPH=$(echo "scale=0; 10+(${1:-0}/10)" | bc -l)
 echo "🁟🁞🁝🁜🁛🁔🁍🁆🀿🀸🀱🀲🀳🀴🀵🀶🀷🀾🁅🁌🁓" \
 | sed -r "s/^.{${GLYPH}}(.).*$/\\1/"
