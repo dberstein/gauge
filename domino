@@ -1,0 +1,12 @@
+#!/bin/sh
+
+PCT=${1:-0}
+
+[ ${PCT} -gt 0 ] \
+    && DICT=$(echo -n 🀸🀿🁆🁍🁔🁛🁜🁝🁞🁟) \
+    || DICT=$(echo -n 🀲🀳🀴🀵🀶🀷🀾🁅🁌🁓)
+
+BUCKET=$(echo "sqrt(${PCT}^2)/${2:-$(echo -n ${DICT} | wc -m)}" | bc)
+[ ${BUCKET} -eq 0 ] \
+    && echo "🀱" \
+    || echo ${DICT} | sed 's/./&\n/g' | sed ${BUCKET}'!d'
