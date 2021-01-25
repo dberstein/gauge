@@ -1,4 +1,4 @@
-# GAUGE #
+# GAUGE for TUI #
 
 Usage:
 
@@ -10,11 +10,11 @@ Usage:
 Maps **value** to a float percentage value in range `0..<scale>`, where `<scale>` is 100%.
 
     $ gauge 1000 4000
-    $ 25.00%
+    25.00%
     $ gauge float 1000 4000
-    $ 25.00%
+    25.00%
     $ gauge-float 1000 4000
-    $ 25.00%
+    25.00%
 
 ## Type: `domino` (% in range `-10..0..10`) ##
 Maps **value** to a value in range `0..10` with domino glyph:
