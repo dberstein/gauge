@@ -1,0 +1,15 @@
+#!/bin/sh
+
+_SELF="$(basename "$0")"
+
+gauge_default() {
+    echo "./${_SELF}-float"
+}
+
+GAUGE="./${_SELF}-${1:-default}"
+if [ -x "${GAUGE}" ]; then
+    shift
+else
+    GAUGE=$(gauge_default)
+fi
+"${GAUGE}" "$@"
