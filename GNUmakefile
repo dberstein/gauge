@@ -1,5 +1,6 @@
+
 PROG=gauge
-PROGS=$(PROG) $(PROG)-float $(PROG)-domino
+PROGS=$(PROG) $(PROG)-float $(PROG)-domino $(PROG)-temp $(PROG)-battery
 INSTALL_DIR=/usr/local/bin
 
 .PHONY: test

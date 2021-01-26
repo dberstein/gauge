@@ -16,6 +16,24 @@ Maps **value** to a float percentage value in range `0..<scale>`, where `<scale>
     $ gauge-float 1000 4000
     25.00%
 
+## Type: `battery` (% in range 0..100 in 5 steps) ##
+
+	$ eq 0 24 99 | xargs -n1 gauge battery
+	0% 
+	24% 
+	48% 
+	72% 
+	96% 
+
+## Type: `temp` (% in range 0..100 in 5 steps) ##
+
+	$ seq 0 24 99 | xargs -n1 gauge temp
+	0% 
+	24% 
+	48% 
+	72% 
+	96% 
+
 ## Type: `domino` (% in range `-10..0..10`) ##
 Maps **value** to a value in range `0..10` with domino glyph:
   | `+n`        | `glyph`                          | `-n`           |

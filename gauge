@@ -3,7 +3,7 @@
 _SELF="$(basename "$0")"
 
 gauge_default() {
-    echo "./${_SELF}-float"
+    echo "${GAUGE_DEFAULT:-./${_SELF}-float}"
 }
 
 GAUGE="./${_SELF}-${1:-default}"
